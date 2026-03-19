@@ -129,12 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowLeft') slideTo(current + 1);
     });
 
-    // Auto-advance every 5s
-    let autoTimer = setInterval(() => slideTo(current + 1), 5000);
+    // Auto-advance every 3s
+    let autoTimer = setInterval(() => slideTo(current + 1), 3000);
     [prevBtn, nextBtn, ...dots].forEach(el => {
       el.addEventListener('click', () => {
         clearInterval(autoTimer);
-        autoTimer = setInterval(() => slideTo(current + 1), 5000);
+        autoTimer = setInterval(() => slideTo(current + 1), 3000);
       });
     });
 

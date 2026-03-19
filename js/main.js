@@ -142,35 +142,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ===== VIDEO REEL PLAY/PAUSE =====
+  // ===== VIDEO REEL — autoplay when visible =====
   const reelVideo = document.getElementById('reelVideo');
-  const reelPlayBtn = document.getElementById('reelPlayBtn');
 
-  if (reelVideo && reelPlayBtn) {
-    const iconPause = reelPlayBtn.querySelector('.icon-pause');
-    const iconPlay = reelPlayBtn.querySelector('.icon-play');
-
-    const updateBtn = () => {
-      const paused = reelVideo.paused;
-      iconPause.style.display = paused ? 'none' : '';
-      iconPlay.style.display = paused ? '' : 'none';
-      reelPlayBtn.setAttribute('aria-label', paused ? 'נגן' : 'השהה');
-    };
-
-    reelPlayBtn.addEventListener('click', () => {
-      if (reelVideo.paused) {
-        reelVideo.play();
-      } else {
-        reelVideo.pause();
-      }
-      updateBtn();
-    });
-
-    reelVideo.addEventListener('play', updateBtn);
-    reelVideo.addEventListener('pause', updateBtn);
-
-    // Try autoplay
+  if (reelVideo) {
+    // Try immediate autoplay (works when muted)
     reelVideo.play().catch(() => {});
+
+    // Also use IntersectionObserver as fallback — play when scrolled into view
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          reelVideo.play().catch(() => {});
+        } else {
+          reelVideo.pause();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    videoObserver.observe(reelVideo);
   }
 
 

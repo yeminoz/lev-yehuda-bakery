@@ -96,15 +96,15 @@
         </button>
 
         <div class="product-slider" id="productSlider" aria-live="polite">
-          <div class="product-slide" role="group" aria-label="תמונה 1"><div class="product-slide-img"><img src="images/B1.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 2"><div class="product-slide-img"><img src="images/B2.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 3"><div class="product-slide-img"><img src="images/B3.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 4"><div class="product-slide-img"><img src="images/G1.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 5"><div class="product-slide-img"><img src="images/G2.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 6"><div class="product-slide-img"><img src="images/G3.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 7"><div class="product-slide-img"><img src="images/L1.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 8"><div class="product-slide-img"><img src="images/L2.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
-          <div class="product-slide" role="group" aria-label="תמונה 9"><div class="product-slide-img"><img src="images/L3.webp" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 1"><div class="product-slide-img"><img src="images/B1.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 2"><div class="product-slide-img"><img src="images/B2.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 3"><div class="product-slide-img"><img src="images/B3.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 4"><div class="product-slide-img"><img src="images/G1.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 5"><div class="product-slide-img"><img src="images/G2.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 6"><div class="product-slide-img"><img src="images/G3.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 7"><div class="product-slide-img"><img src="images/L1.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 8"><div class="product-slide-img"><img src="images/L2.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 9"><div class="product-slide-img"><img src="images/L3.webp" alt="מאפיית לב יהודה" loading="eager" /></div></div>
         </div>
 
         <button class="slider-arrow slider-arrow--next" id="sliderNext" aria-label="הבא">
@@ -178,6 +178,7 @@
         <div class="reel-player-wrap fade-in">
           <div class="reel-player">
             <video
+              id="reelVideo"
               src="videos/behind-the-scenes.mp4"
               muted
               autoplay

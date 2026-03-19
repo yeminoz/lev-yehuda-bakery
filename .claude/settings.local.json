@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find '/c/Users/User/Desktop/לב יהודה' -name DSC_*.jpg)",
+      "Bash(find '/c/Users/User/Desktop/לב יהודה' -not -name *.jpg -type f)",
+      "Bash(start \"\" \"C:\\\\Users\\\\User\\\\Desktop\\\\Lev-Yehuda.web\\\\index.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8765/)",
+      "Read(//c/Users/User/Desktop/לב יהודה/**)",
+      "Bash(python -c \":*)",
+      "Bash(pip install:*)",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(ipconfig)",
+      "Bash(netstat -ano)",
+      "Bash(where ngrok:*)"
+    ]
+  }
+}

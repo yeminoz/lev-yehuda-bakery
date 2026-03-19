@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מאפיית לב יהודה — הטעם שמחבר דורות</title>
+  <meta name="description" content="מאפיית בוטיק המתמחה בחלות שבת ובייגל ירושלמי. ישירות מעיר האבות לשולחן שלכם. כשרות הרב לנדא." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;600;700&family=David+Libre:wght@400;700&family=Secular+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-link">
+        <img src="images/logo.png" alt="לוגו מאפיית לב יהודה" class="site-logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="ניווט ראשי">
+        <ul class="nav-list">
+          <li><a href="#products">המוצרים</a></li>
+          <li><a href="#about">הסיפור שלנו</a></li>
+          <li><a href="#gallery">מאחורי הקלעים</a></li>
+          <li><a href="#where-to-buy">איפה למצוא?</a></li>
+          <li><a href="#b2b">לבתי עסק</a></li>
+          <li><a href="#contact" class="nav-cta">צור קשר</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#products">המוצרים</a></li>
+      <li><a href="#about">הסיפור שלנו</a></li>
+      <li><a href="#gallery">מאחורי הקלעים</a></li>
+      <li><a href="#where-to-buy">איפה למצוא?</a></li>
+      <li><a href="#b2b">לבתי עסק</a></li>
+      <li><a href="#contact">צור קשר</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-image-wrap">
+        <img
+          src="images/hero.jpg"
+          alt="שתי ידיים מעבירות חלה — מאפיית לב יהודה"
+          class="hero-img"
+          loading="eager"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content fade-in">
+        <p class="hero-label">מאפיית בוטיק | קרית ארבע — חברון</p>
+        <h1 class="hero-title">מאפיית לב יהודה</h1>
+        <p class="hero-subtitle">הטעם שמחבר דורות</p>
+        <div class="hero-ctas">
+          <a href="#where-to-buy" class="btn btn-primary">איפה קונים?</a>
+        </div>
+      </div>
+
+      <a href="#products" class="hero-scroll-arrow" aria-label="גלול למטה">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ===== PRODUCTS GALLERY SLIDER ===== -->
+    <section class="products section-padding" id="products">
+      <div class="section-intro fade-in">
+        <span class="section-label">מה אנחנו אופים</span>
+        <h2 class="section-title">המוצרים שלנו</h2>
+      </div>
+
+      <div class="product-slider-wrap fade-in">
+        <button class="slider-arrow slider-arrow--prev" id="sliderPrev" aria-label="הקודם">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+
+        <div class="product-slider" id="productSlider" aria-live="polite">
+          <div class="product-slide" role="group" aria-label="תמונה 1"><div class="product-slide-img"><img src="images/B1.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 2"><div class="product-slide-img"><img src="images/B2.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 3"><div class="product-slide-img"><img src="images/B3.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 4"><div class="product-slide-img"><img src="images/G1.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 5"><div class="product-slide-img"><img src="images/G2.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 6"><div class="product-slide-img"><img src="images/G3.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 7"><div class="product-slide-img"><img src="images/L1.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 8"><div class="product-slide-img"><img src="images/L2.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+          <div class="product-slide" role="group" aria-label="תמונה 9"><div class="product-slide-img"><img src="images/L3.jpg" alt="מאפיית לב יהודה" loading="lazy" /></div></div>
+        </div>
+
+        <button class="slider-arrow slider-arrow--next" id="sliderNext" aria-label="הבא">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="slider-dots" id="sliderDots" aria-label="ניווט בין שקופיות">
+        <button class="dot active" data-index="0" aria-label="תמונה 1"></button>
+        <button class="dot" data-index="1" aria-label="תמונה 2"></button>
+        <button class="dot" data-index="2" aria-label="תמונה 3"></button>
+        <button class="dot" data-index="3" aria-label="תמונה 4"></button>
+        <button class="dot" data-index="4" aria-label="תמונה 5"></button>
+        <button class="dot" data-index="5" aria-label="תמונה 6"></button>
+        <button class="dot" data-index="6" aria-label="תמונה 7"></button>
+        <button class="dot" data-index="7" aria-label="תמונה 8"></button>
+        <button class="dot" data-index="8" aria-label="תמונה 9"></button>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT / STORY ===== -->
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <span class="section-label">הסיפור שלנו</span>
+          <h2 class="section-title">הסיפור שלנו: מצרפת לעיר האבות</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text fade-in">
+            <p class="about-body-text">
+              הכל התחיל במאפייה המשפחתית שלנו בצרפת. שם למדנו את היסודות: שהבצק צריך זמן, שהידיים הן הכלי הכי מדויק במטבח, ושחלה טובה באמת דורשת סבלנות ותנור לבנים איכותי.
+            </p>
+            <p class="about-body-text">
+              כשעלינו לארץ, היה לנו טבעי לקחת את המסורת הזו איתנו אל המקום שבו הרגשנו הכי בבית – עיר האבות. בקרית ארבע, הטכניקה המוקפדת שהבאנו מהבית פגשה את השורשים המקומיים, ובחיבור הזה נולדה מאפיית לב יהודה.
+            </p>
+            <p class="about-body-text">
+              היום, אנחנו ממשיכים את אותה השרשרת. קליעה ידנית, התפחה איטית ואפייה שנמשכת בדיוק עד הרגע הנכון. אנחנו לא רק מכינים לחם לשבת – אנחנו מביאים את הריח והטעם שעוברים אצלנו במשפחה, ישירות לשולחן שלכם.
+            </p>
+            <blockquote class="story-quote">
+              "ישירות מעיר האבות לשולחן שלכם"
+            </blockquote>
+          </div>
+
+          <div class="about-images fade-in fade-in-delay">
+            <div class="founder-img-wrap">
+              <img
+                src="images/founder.jpg"
+                alt="מייסד מאפיית לב יהודה"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY / BEHIND THE SCENES ===== -->
+    <section class="gallery section-padding bg-cream" id="gallery">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <span class="section-label">מאחורי הקלעים</span>
+          <h2 class="section-title">ככה נולדת החלה שלכם</h2>
+          <p class="section-subtitle">מהלישה ועד התנור — כל שלב בנשמה</p>
+        </div>
+
+        <p class="gallery-closing-text fade-in">אצלנו כל חלה מקבלת תשומת לב, חום ואהבה — ונארזת בקפידה כדי שתגיע אליכם לשולחן שבת בטריות המירבית</p>
+
+        <div class="reel-player-wrap fade-in">
+          <div class="reel-player">
+            <video
+              id="reelVideo"
+              src="videos/behind-the-scenes.mp4"
+              muted
+              autoplay
+              loop
+              playsinline
+              preload="metadata"
+            ></video>
+            <button class="reel-play-btn" id="reelPlayBtn" aria-label="השהה">
+              <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+              <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" width="32" height="32" style="display:none">
+                <polygon points="5,3 19,12 5,21"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHERE TO BUY ===== -->
+    <section class="where-to-buy section-padding" id="where-to-buy">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <span class="section-label">נקודות מכירה</span>
+          <h2 class="section-title">איפה אפשר למצוא את החלות שלנו?</h2>
+          <p class="section-subtitle">
+            החלות שלנו מגיעות אליכם דרך רשת נקודות מכירה —<br />
+            סופרים, מכולות ומעדניות ברחבי הארץ
+          </p>
+        </div>
+
+        <!-- Geolocation button -->
+        <div class="geo-section fade-in">
+          <button class="btn-geo" id="geoBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+              <circle cx="12" cy="12" r="9" stroke-dasharray="2 4"/>
+            </svg>
+            מצא נקודת מכירה קרובה אליי
+          </button>
+          <div class="geo-result" id="geoResult" hidden></div>
+        </div>
+
+        <!-- Search field -->
+        <div class="store-search-wrap fade-in">
+          <div class="store-search-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" class="search-icon">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input
+              type="search"
+              id="storeSearch"
+              class="store-search-input"
+              placeholder="חפש עיר או שכונה..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="region-accordion fade-in" id="regionAccordion">
+
+          <!-- קרית ארבע -->
+          <div class="accordion-item" data-region="קרית ארבע">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="region-title">קרית ארבע</span>
+              <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" hidden>
+              <ul class="store-list">
+                <li class="store-item" data-search="סופר דקל קרית ארבע סולם אלדד"><span class="store-name">סופר דקל</span><span class="store-address">סולם אלדד 2, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=סולם אלדד 2 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר ציפו קרית ארבע הרב צבי יהודה קוק"><span class="store-name">סופר ציפו</span><span class="store-address">הרב צבי יהודה קוק 123, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=הרב צבי יהודה קוק 123 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ירושלים -->
+          <div class="accordion-item" data-region="ירושלים">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="region-title">ירושלים</span>
+              <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" hidden>
+
+              <div class="neighborhood-group" data-neighborhood="גרמנית בקעה ארנונה תלפיות">
+                <p class="neighborhood-label">גרמנית / בקעה / ארנונה</p>
+                <ul class="store-list">
+                  <li class="store-item" data-search="מעדני צ'ונה ירושלים גרמנית ארנונה התנופה"><span class="store-name">מעדני צ'ונה</span><span class="store-address">התנופה 11, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=התנופה 11 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="מינימרקט שקורי ירושלים ארנונה עין גדי"><span class="store-name">מינימרקט שקורי</span><span class="store-address">עין גדי 19, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=עין גדי 19 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר ספיר חברון ירושלים דרך חברון ארנונה"><span class="store-name">סופר ספיר חברון</span><span class="store-address">דרך חברון 101, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=דרך חברון 101 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="מעדניית בית לחם ירושלים גרמנית בקעה"><span class="store-name">מעדניית בית לחם</span><span class="store-address">דרך בית לחם 33, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=דרך בית לחם 33 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר דיל בית לחם ירושלים בקעה תלפיות"><span class="store-name">סופר דיל בית לחם</span><span class="store-address">דרך בית לחם 77, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=דרך בית לחם 77 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סל המושבה הגרמנית ירושלים עמק רפאים גרמנית"><span class="store-name">סל המושבה הגרמנית</span><span class="store-address">עמק רפאים 43, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=עמק רפאים 43 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                </ul>
+              </div>
+
+              <div class="neighborhood-group" data-neighborhood="רחביה קרית שמואל">
+                <p class="neighborhood-label">רחביה / קרית שמואל</p>
+                <ul class="store-list">
+                  <li class="store-item" data-search="NIVA COFFEE ירושלים רחביה הפלמח"><span class="store-name">NIVA COFFEE</span><span class="store-address">הפלמ"ח 42, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=הפלמח 42 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר פילבוקס ירושלים רחביה עזה"><span class="store-name">סופר פילבוקס</span><span class="store-address">עזה 40, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=עזה 40 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר נמירוב ירושלים רחביה קרן קיימת"><span class="store-name">סופר נמירוב</span><span class="store-address">קרן קיימת לישראל 26, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=קרן קיימת לישראל 26 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר ספיר ברזיל ירושלים קרית שמואל ברזיל"><span class="store-name">סופר ספיר ברזיל</span><span class="store-address">ברזיל 2, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=ברזיל 2 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="דולצ'ה קאסה ירושלים טלביה רחביה דולצין"><span class="store-name">דולצ'ה קאסה</span><span class="store-address">דולצ'ין 26, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=אריה דולצין 26 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="סופר מכולת ירושלים רחביה אבן שפורט"><span class="store-name">סופר מכולת</span><span class="store-address">אבן שפורט 1, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=אבן שפורט 1 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                </ul>
+              </div>
+
+              <div class="neighborhood-group" data-neighborhood="בית הכרם בית וגן הר נוף">
+                <p class="neighborhood-label">בית הכרם / בית וגן / הר נוף</p>
+                <ul class="store-list">
+                  <li class="store-item" data-search="מרקט בית הכרם ירושלים החלוץ"><span class="store-name">מרקט בית הכרם</span><span class="store-address">החלוץ 72, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=החלוץ 72 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="מעדני צדקיהו בית הכרם ירושלים אביזוהר"><span class="store-name">מעדני צדקיהו בית הכרם</span><span class="store-address">אביזוהר 8, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=אביזוהר 8 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="שף אליהו ליזרוביץ בית וגן ירושלים הפסגה"><span class="store-name">שף אליהו ליזרוביץ בית וגן</span><span class="store-address">הפסגה 25, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=הפסגה 25 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="שף אליהו ליזרוביץ הר נוף ירושלים שאולזון"><span class="store-name">שף אליהו ליזרוביץ הר נוף</span><span class="store-address">שאולזון 51, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=שאולזון 51 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                </ul>
+              </div>
+
+              <div class="neighborhood-group" data-neighborhood="הר חומה">
+                <p class="neighborhood-label">הר חומה</p>
+                <ul class="store-list">
+                  <li class="store-item" data-search="סופר ספיר הר חומה ירושלים אליהו קורן"><span class="store-name">סופר ספיר הר חומה</span><span class="store-address">אליהו קורן 25, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=אליהו קורן 25 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                </ul>
+              </div>
+
+              <div class="neighborhood-group" data-neighborhood="גבעת שאול רוממה">
+                <p class="neighborhood-label">גבעת שאול / רוממה</p>
+                <ul class="store-list">
+                  <li class="store-item" data-search="צ'ולנט בר ירושלים גבעת שאול משמר העם"><span class="store-name">צ'ולנט בר</span><span class="store-address">משמר העם 5, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=משמר העם 5 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                  <li class="store-item" data-search="שאבעט מרקט ירושלים רוממה גאולה ירמיהו"><span class="store-name">שאבעט מרקט</span><span class="store-address">ירמיהו 68, ירושלים</span><a class="store-waze" href="https://waze.com/ul?q=ירמיהו 68 ירושלים&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- גוש עציון -->
+          <div class="accordion-item" data-region="גוש עציון אפרת">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="region-title">גוש עציון</span>
+              <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" hidden>
+              <ul class="store-list">
+                <li class="store-item" data-search="סופר דיל הדבש אפרת גוש עציון שערי אליהו"><span class="store-name">סופר דיל הדבש</span><span class="store-address">שערי אליהו, אפרת</span><a class="store-waze" href="https://waze.com/ul?q=שערי אליהו אפרת&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר שוק העיר אפרת גוש עציון זית שמן"><span class="store-name">סופר שוק העיר</span><span class="store-address">זית שמן 2, אפרת</span><a class="store-waze" href="https://waze.com/ul?q=זית שמן 2 אפרת&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר עמדי ידידי אפרת גוש עציון הקטורת"><span class="store-name">סופר עמדי ידידי</span><span class="store-address">הקטורת 1, אפרת</span><a class="store-waze" href="https://waze.com/ul?q=הקטורת 1 אפרת&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר דיל הדקל אפרת גוש עציון הדקל"><span class="store-name">סופר דיל הדקל</span><span class="store-address">הדקל 8, אפרת</span><a class="store-waze" href="https://waze.com/ul?q=הדקל 8 אפרת&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="מעדני צדקיהו אפרת גוש עציון תאנה"><span class="store-name">מעדני צדקיהו</span><span class="store-address">מרכז מסחרי תאנה, אפרת</span><a class="store-waze" href="https://waze.com/ul?q=מרכז מסחרי תאנה אפרת&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר הכל כאן תקוע גוש עציון"><span class="store-name">סופר הכל כאן תקוע</span><span class="store-address">יישוב תקוע</span><a class="store-waze" href="https://waze.com/ul?q=תקוע גוש עציון&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר הכל כאן נוקדים גוש עציון"><span class="store-name">סופר הכל כאן נוקדים</span><span class="store-address">יישוב נוקדים</span><a class="store-waze" href="https://waze.com/ul?q=נוקדים גוש עציון&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר בכרם כרמי צור גוש עציון"><span class="store-name">סופר בכרם</span><span class="store-address">כרמי צור</span><a class="store-waze" href="https://waze.com/ul?q=כרמי צור&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="no-results-msg" id="noResults" hidden>
+          <p>לא נמצאו תוצאות. נסו מילה אחרת או <a href="#contact">צרו איתנו קשר</a>.</p>
+        </div>
+
+        <div class="where-to-buy-cta fade-in">
+          <p>לא מצאתם ליד הבית?</p>
+          <a href="#contact" class="btn btn-primary">כתבו לנו ונסדיר</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== B2B ===== -->
+    <section class="b2b section-padding bg-dark" id="b2b">
+      <div class="container">
+        <div class="b2b-grid">
+          <div class="b2b-images fade-in">
+            <div class="b2b-img-main">
+              <img src="images/E1.jpg" alt="מאפיית לב יהודה — אספקה לעסקים" loading="lazy" />
+            </div>
+            <div class="b2b-img-secondary">
+              <img src="images/E2.jpg" alt="חלות לעסקים — מאפיית לב יהודה" loading="lazy" />
+            </div>
+            <div class="b2b-img-third">
+              <img src="images/E3.jpg" alt="חלות לעסקים — מאפיית לב יהודה" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="b2b-text fade-in fade-in-delay">
+            <span class="section-label light">לבתי עסק</span>
+            <h2 class="section-title light">רוצים להציע ללקוחות שלכם<br/>חלות ברמה שונה לגמרי?</h2>
+            <p>
+              מאפיית לב יהודה מספקת לבתי עסק חלות ובייגלים טריים, באריזה מקצועית עם מיתוג מלא.
+            </p>
+
+            <ul class="b2b-benefits">
+              <li>
+                <span class="check">✓</span>
+                <span>אספקה שבועית קבועה — מדי שבוע, בזמן</span>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <span>כשרות הרב לנדא — כשרות מהדרין</span>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <span>אריזה ממותגת מוכנה למדף</span>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <span>ישירות מעיר האבות — סיפור שמוכר את עצמו</span>
+              </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-wheat">צרו קשר להצעת מחיר</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials section-padding" id="testimonials">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <span class="section-label">ספרו עלינו</span>
+          <h2 class="section-title">מה אומרים עלינו</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card fade-in">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"הטריות מדהימה — כאילו יצאה מהתנור אליי הביתה"</p>
+            <footer class="testimonial-author">
+              <span class="author-name">לקוחה מירושלים</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card fade-in fade-in-delay">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"הבייגל הירושלמי שלהם הוא הכי קרוב לאמיתי שמצאנו"</p>
+            <footer class="testimonial-author">
+              <span class="author-name">בעל מעדנייה, תל אביב</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card fade-in fade-in-delay-2">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"הלקוחות שלי שואלים בכל שבוע איפה החלה הזו"</p>
+            <footer class="testimonial-author">
+              <span class="author-name">מנהל סופרמרקט</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section-padding bg-cream" id="contact">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <span class="section-label">צור קשר</span>
+          <h2 class="section-title">נשמח לשמוע מכם</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info fade-in">
+            <h3>דברו איתנו</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">📞</span>
+                <a href="tel:+972545585157">054-558-5157</a>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <a href="mailto:lev.yehuda10@gmail.com">lev.yehuda10@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-icon">📍</span>
+                <span>קרית ארבע, חברון</span>
+              </li>
+              <li>
+                <span class="contact-icon">📸</span>
+                <a href="https://instagram.com/levyehudabakery" target="_blank" rel="noopener">@levyehudabakery</a>
+              </li>
+            </ul>
+            <div class="kashrus-badge">
+              <img src="images/kasher.jpeg" alt="כשרות הרב לנדא" class="kashrus-img" loading="lazy" />
+            </div>
+          </div>
+
+          <form class="contact-form fade-in fade-in-delay" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">שם מלא</label>
+              <input type="text" id="name" name="name" placeholder="השם שלכם" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">טלפון</label>
+              <input type="tel" id="phone" name="phone" placeholder="050-000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="email">אימייל</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">נושא</label>
+              <select id="subject" name="subject">
+                <option value="">בחרו נושא...</option>
+                <option value="consumer">לקוח פרטי — שאלה כללית</option>
+                <option value="b2b">בית עסק — הצעת מחיר</option>
+                <option value="distribution">נקודת מכירה חדשה</option>
+                <option value="other">אחר</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">הודעה</label>
+              <textarea id="message" name="message" rows="4" placeholder="כתבו לנו..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">שליחה</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="לוגו מאפיית לב יהודה" class="footer-logo" loading="lazy" />
+          <p class="footer-slogan">הטעם שמחבר דורות</p>
+          <p class="footer-location">קרית ארבע — עיר האבות</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/levyehudabakery" target="_blank" rel="noopener" aria-label="אינסטגרם">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/972545585157" target="_blank" rel="noopener" aria-label="וואטסאפ">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="ניווט בפוטר">
+          <h4>ניווט מהיר</h4>
+          <ul>
+            <li><a href="#products">המוצרים</a></li>
+            <li><a href="#about">הסיפור שלנו</a></li>
+            <li><a href="#gallery">מאחורי הקלעים</a></li>
+            <li><a href="#where-to-buy">איפה למצוא?</a></li>
+            <li><a href="#b2b">לבתי עסק</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-kashrus">
+          <h4>כשרות</h4>
+          <img src="images/kasher.jpeg" alt="כשרות הרב לנדא" class="footer-kashrus-img" loading="lazy" />
+        </div>
+
+        <div class="footer-challah-gimmick">
+          <div class="challah-blessing">
+            <p class="blessing-text" lang="he">"הֲרֵי זוֹ חַלָּה"</p>
+            <p class="blessing-sub">מצוות הפרשת חלה מן התורה</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 מאפיית לב יהודה | קרית ארבע</p>
+        <p class="footer-tagline">הטעם שמחבר דורות</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -90,13 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== PRODUCT SLIDER (single image, full-width, 16:9) =====
   const slider = document.getElementById('productSlider');
-  const prevBtn = document.getElementById('sliderPrev');
-  const nextBtn = document.getElementById('sliderNext');
   const dots = document.querySelectorAll('.slider-dots .dot');
 
-  if (slider && prevBtn && nextBtn) {
+  if (slider) {
     const slides = slider.querySelectorAll('.product-slide');
-    const total = slides.length; // 9
+    const total = slides.length;
     let current = 0;
 
     const slideTo = (index) => {
@@ -105,11 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     };
 
-    prevBtn.addEventListener('click', () => slideTo(current - 1));
-    nextBtn.addEventListener('click', () => slideTo(current + 1));
-
     dots.forEach(dot => {
-      dot.addEventListener('click', () => slideTo(Number(dot.dataset.index)));
+      dot.addEventListener('click', () => {
+        slideTo(Number(dot.dataset.index));
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => slideTo(current + 1), 3000);
+      });
     });
 
     // Touch/swipe support
@@ -131,15 +130,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Auto-advance every 3s
     let autoTimer = setInterval(() => slideTo(current + 1), 3000);
-    [prevBtn, nextBtn, ...dots].forEach(el => {
-      el.addEventListener('click', () => {
-        clearInterval(autoTimer);
-        autoTimer = setInterval(() => slideTo(current + 1), 3000);
-      });
-    });
 
     slideTo(0);
   }
+
+  // ===== RIPPLE EFFECT on buttons =====
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      const size = Math.max(btn.offsetWidth, btn.offsetHeight);
+      const rect = btn.getBoundingClientRect();
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size/2}px;top:${e.clientY - rect.top - size/2}px`;
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
 
 
   // ===== VIDEO REEL — autoplay when visible =====

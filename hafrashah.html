@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>הפרשת חלה — מאפיית לב יהודה</title>
+  <meta name="description" content="שלחו שם לתפילה בהפרשת החלה השבועית של מאפיית לב יהודה בחברון." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;600;700&family=David+Libre:wght@400;700&family=Secular+One&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== VARIABLES (same as main site) ===== */
+    :root {
+      --color-burgundy: #7A1A2E;
+      --color-burgundy-dark: #5c1222;
+      --color-burgundy-light: #9b2f45;
+      --color-dark: #1E1C1A;
+      --color-cream: #E8E0C8;
+      --color-cream-light: #F0EBD8;
+      --color-wheat: #C4975A;
+      --color-wheat-light: #D4AA74;
+      --color-bg: #F5F0E6;
+      --color-white: #FDFAF5;
+      --color-text-muted: #6B6560;
+      --color-border: rgba(196, 151, 90, 0.25);
+
+      --font-display: 'Frank Ruhl Libre', Georgia, serif;
+      --font-body: 'Heebo', Arial, sans-serif;
+      --font-accent: 'David Libre', Georgia, serif;
+      --font-story: 'Secular One', Georgia, serif;
+
+      --border-radius: 8px;
+      --border-radius-lg: 16px;
+      --transition: 0.3s ease;
+      --shadow-md: 0 4px 20px rgba(30, 28, 26, 0.12);
+      --shadow-lg: 0 8px 40px rgba(30, 28, 26, 0.18);
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      direction: rtl;
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-dark);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; transition: var(--transition); }
+
+    /* ===== BACK LINK ===== */
+    .back-bar {
+      background: var(--color-dark);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-wheat-light);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .back-link:hover { color: var(--color-wheat); gap: 12px; }
+
+    .back-link svg { width: 18px; height: 18px; }
+
+    /* ===== HERO BANNER ===== */
+    .page-hero {
+      background: linear-gradient(135deg, var(--color-burgundy-dark) 0%, var(--color-burgundy) 60%, #9b2f45 100%);
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4975A' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+
+    .page-hero-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+
+    .page-hero-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      font-weight: 900;
+      color: var(--color-white);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: rgba(253, 250, 245, 0.85);
+      line-height: 1.8;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ===== RAFFLE BANNER ===== */
+    .raffle-banner {
+      max-width: 600px;
+      margin: -28px auto 0;
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .raffle-banner-inner {
+      background: var(--color-white);
+      border: 2px solid var(--color-wheat);
+      border-radius: var(--border-radius-lg);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .raffle-banner-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-burgundy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .raffle-banner-body {
+      font-size: 0.95rem;
+      color: var(--color-dark);
+      line-height: 1.8;
+    }
+
+    .raffle-banner-note {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ===== FORM SECTION ===== */
+    .form-section {
+      max-width: 600px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    .form-card {
+      background: var(--color-white);
+      border-radius: var(--border-radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .form-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-label .required {
+      color: var(--color-burgundy);
+      margin-right: 3px;
+    }
+
+    .form-label .optional {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+      margin-right: 6px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--border-radius);
+      background: var(--color-bg);
+      color: var(--color-dark);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: var(--transition);
+      outline: none;
+      direction: rtl;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--color-wheat);
+      background: var(--color-white);
+      box-shadow: 0 0 0 3px rgba(196, 151, 90, 0.15);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #b0a99a;
+    }
+
+    .form-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23C4975A' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: left 14px center;
+      padding-left: 40px;
+      cursor: pointer;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    /* ===== SUBMIT BUTTON ===== */
+    .btn-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--color-burgundy);
+      color: var(--color-white);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-submit:hover {
+      background: var(--color-burgundy-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(122, 26, 46, 0.35);
+    }
+
+    .btn-submit:active { transform: translateY(0); }
+
+    .btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Ripple */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      transform: scale(0);
+      animation: ripple-anim 0.55s linear;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-anim {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* Spinner */
+    .btn-submit .spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .btn-submit.loading .btn-text { display: none; }
+    .btn-submit.loading .spinner { display: block; }
+
+    /* ===== THANK YOU STATE ===== */
+    #form-wrap, #thankyou-wrap { transition: opacity 0.4s ease; }
+
+    #thankyou-wrap {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .thankyou-icon { font-size: 3.5rem; margin-bottom: 20px; }
+
+    .thankyou-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--color-burgundy);
+      margin-bottom: 16px;
+    }
+
+    .thankyou-body {
+      font-size: 1.05rem;
+      color: var(--color-dark);
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+
+    .raffle-number {
+      display: inline-block;
+      background: var(--color-cream);
+      border: 1px solid var(--color-wheat);
+      border-radius: var(--border-radius);
+      padding: 8px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      color: var(--color-burgundy);
+      font-weight: 700;
+      margin-bottom: 28px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== WHATSAPP BUTTON ===== */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: #25D366;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 28px 0;
+    }
+
+    /* ===== ERROR ===== */
+    .field-error {
+      font-size: 0.82rem;
+      color: var(--color-burgundy);
+      margin-top: 5px;
+      display: none;
+    }
+
+    .form-input.invalid,
+    .form-select.invalid {
+      border-color: var(--color-burgundy);
+    }
+
+    /* ===== FOOTER ===== */
+    .page-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .page-footer a { color: var(--color-wheat); }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 480px) {
+      .form-card { padding: 24px 20px; }
+      .page-hero { padding: 44px 20px 40px; }
+      .raffle-banner-inner { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACK BAR -->
+  <div class="back-bar">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+      חזרה לאתר
+    </a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-hero-icon">🕯️</span>
+      <h1>הפרשת חלה<br/>מאפיית לב יהודה</h1>
+      <p>כל שבוע, לפני האפייה, אנחנו מפרישים חלה ומתפללים בעיר האבות.<br/>שלחו לנו שם — ונעלה אותו בתפילה.</p>
+    </div>
+  </div>
+
+  <!-- RAFFLE BANNER -->
+  <div class="raffle-banner">
+    <div class="raffle-banner-inner">
+      <div class="raffle-banner-title">
+        🎗️ הגרלה שבועית
+      </div>
+      <p class="raffle-banner-body">
+        כל ממלא טופס משתתף בהגרלה השבועית.<br/>
+        הזוכה מקבל תפילת הפרשת חלה אישית בחברון —<br/>
+        בקרבה לפתח גן עדן.
+      </p>
+      <p class="raffle-banner-note">* ההגרלה מתקיימת כל שישי — הזוכה יקבל עדכון אישי.</p>
+    </div>
+  </div>
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-card">
+
+      <!-- FORM -->
+      <div id="form-wrap">
+        <h2>שלחו שם לתפילה</h2>
+
+        <form id="hafrashah-form" novalidate>
+
+          <!-- שם לתפילה -->
+          <div class="form-group">
+            <label class="form-label" for="prayer-name">
+              <span class="required">*</span> שם לתפילה
+            </label>
+            <input
+              type="text"
+              id="prayer-name"
+              name="prayer_name"
+              class="form-input"
+              placeholder="השם לתפילה"
+              required
+              autocomplete="off"
+            />
+            <div class="field-error" id="prayer-name-error">אנא הכניסו שם לתפילה</div>
+          </div>
+
+          <!-- סיבת התפילה -->
+          <div class="form-group">
+            <label class="form-label" for="prayer-reason">
+              <span class="required">*</span> סיבת התפילה
+            </label>
+            <select id="prayer-reason" name="prayer_reason" class="form-select" required>
+              <option value="" disabled selected>בחרו סיבה...</option>
+              <option value="רפואה שלמה">רפואה שלמה</option>
+              <option value="זיווג הגון">זיווג הגון</option>
+              <option value="פרנסה וברכה">פרנסה וברכה</option>
+              <option value="ילדים">ילדים</option>
+              <option value="הצלחה">הצלחה</option>
+              <option value="לעילוי נשמת">לעילוי נשמת</option>
+              <option value="אחר">אחר</option>
+            </select>
+            <div class="field-error" id="prayer-reason-error">אנא בחרו סיבה</div>
+          </div>
+
+          <!-- פרטים נוספים -->
+          <div class="form-group">
+            <label class="form-label" for="extra-details">
+              פרטים נוספים
+              <span class="optional">(אופציונלי)</span>
+            </label>
+            <textarea
+              id="extra-details"
+              name="extra_details"
+              class="form-textarea"
+              placeholder="אם תרצו להוסיף משהו..."
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- מספר טלפון -->
+          <div class="form-group">
+            <label class="form-label" for="phone">
+              מספר טלפון
+              <span class="optional">(לצורך עדכון על ההגרלה)</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-input"
+              placeholder="לצורך עדכון על ההגרלה"
+              autocomplete="tel"
+            />
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn-submit" id="submit-btn">
+            <span class="btn-text">כנס להגרלה 🕯️</span>
+            <div class="spinner"></div>
+          </button>
+
+        </form>
+      </div>
+
+      <!-- THANK YOU -->
+      <div id="thankyou-wrap">
+        <div class="thankyou-icon">💛</div>
+        <div class="thankyou-title">השם התקבל</div>
+        <p class="thankyou-body">
+          נכנסתם להגרלה השבועית.<br/>
+          בנוסף — נעלה את השם בתפילת הפרשת החלה הקרובה.<br/><br/>
+          <strong>שבת שלום.</strong>
+        </p>
+        <div class="raffle-number" id="raffle-number-display"></div>
+        <hr class="divider" />
+        <button class="btn-whatsapp" id="share-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          שתפו עם חברים בוואטסאפ
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <p>© מאפיית לב יהודה | <a href="index.html">חזרה לאתר הראשי</a></p>
+  </footer>
+
+  <script>
+    // ===== CONFIG =====
+    const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE'; // ← ימולא אחרי הגדרת ה-Google Sheet
+    const PAGE_URL = 'https://yeminoz.github.io/lev-yehuda-bakery/hafrashah.html';
+
+    // ===== RAFFLE NUMBER =====
+    function generateRaffleNumber() {
+      const now = new Date();
+      const year = now.getFullYear();
+      // ISO week number
+      const start = new Date(now.getFullYear(), 0, 1);
+      const week = String(Math.ceil(((now - start) / 86400000 + start.getDay() + 1) / 7)).padStart(2, '0');
+      const rand = String(Math.floor(1000 + Math.random() * 9000));
+      return `RAFFLE-${year}-${week}-${rand}`;
+    }
+
+    // ===== RIPPLE EFFECT =====
+    document.getElementById('submit-btn').addEventListener('click', function(e) {
+      const btn = this;
+      const circle = document.createElement('span');
+      const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+      const radius = diameter / 2;
+      const rect = btn.getBoundingClientRect();
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${e.clientX - rect.left - radius}px`;
+      circle.style.top = `${e.clientY - rect.top - radius}px`;
+      circle.classList.add('ripple');
+      const existing = btn.querySelector('.ripple');
+      if (existing) existing.remove();
+      btn.appendChild(circle);
+    });
+
+    // ===== FORM SUBMIT =====
+    document.getElementById('hafrashah-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const nameInput   = document.getElementById('prayer-name');
+      const reasonInput = document.getElementById('prayer-reason');
+      let valid = true;
+
+      // Validate name
+      if (!nameInput.value.trim()) {
+        nameInput.classList.add('invalid');
+        document.getElementById('prayer-name-error').style.display = 'block';
+        valid = false;
+      } else {
+        nameInput.classList.remove('invalid');
+        document.getElementById('prayer-name-error').style.display = 'none';
+      }
+
+      // Validate reason
+      if (!reasonInput.value) {
+        reasonInput.classList.add('invalid');
+        document.getElementById('prayer-reason-error').style.display = 'block';
+        valid = false;
+      } else {
+        reasonInput.classList.remove('invalid');
+        document.getElementById('prayer-reason-error').style.display = 'none';
+      }
+
+      if (!valid) return;
+
+      // Show loading
+      const btn = document.getElementById('submit-btn');
+      btn.classList.add('loading');
+      btn.disabled = true;
+
+      const raffleNumber = generateRaffleNumber();
+
+      const payload = {
+        prayer_name:   nameInput.value.trim(),
+        prayer_reason: reasonInput.value,
+        extra_details: document.getElementById('extra-details').value.trim(),
+        phone:         document.getElementById('phone').value.trim(),
+        raffle_number: raffleNumber,
+        submitted_at:  new Date().toLocaleString('he-IL', { timeZone: 'Asia/Jerusalem' })
+      };
+
+      // Send to Google Sheets (if URL set)
+      if (APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        } catch (err) {
+          console.warn('Failed to send to Google Sheets:', err);
+        }
+      }
+
+      // Show thank you
+      document.getElementById('raffle-number-display').textContent = raffleNumber;
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('thankyou-wrap').style.display = 'block';
+
+      // Scroll to top of card
+      document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // ===== WHATSAPP SHARE =====
+    document.getElementById('share-whatsapp').addEventListener('click', function() {
+      const text = encodeURIComponent(
+        'שלחתי שם לתפילה בהפרשת החלה של מאפיית לב יהודה בחברון 🕯️\nגם אתם יכולים: ' + PAGE_URL
+      );
+      window.open('https://wa.me/?text=' + text, '_blank');
+    });
+
+    // ===== CLEAR VALIDATION ON INPUT =====
+    document.getElementById('prayer-name').addEventListener('input', function() {
+      this.classList.remove('invalid');
+      document.getElementById('prayer-name-error').style.display = 'none';
+    });
+
+    document.getElementById('prayer-reason').addEventListener('change', function() {
+      this.classList.remove('invalid');
+      document.getElementById('prayer-reason-error').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

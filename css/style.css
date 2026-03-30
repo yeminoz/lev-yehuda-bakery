@@ -431,7 +431,7 @@ input, textarea, select, button {
 
 @media (max-width: 600px) {
   .hero-img {
-    object-position: center top;
+    object-position: 40% center;
   }
 }
 

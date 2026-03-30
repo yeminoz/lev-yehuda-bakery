@@ -576,7 +576,7 @@
 
   <script>
     // ===== CONFIG =====
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWMbPS5JWrazGwHZzkuWIQG8fxJ4buxgbLW9z2r3gmD_0Ars1uWArw8QDz4lHoQq5p/exec';
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbymufK2fdA2YZevk6Cm6BzNNa5brHcUXkryGnoNex8HGNYPARgic_XouLB8PQ4AnFcb/exec';
     const PAGE_URL = 'https://yeminoz.github.io/lev-yehuda-bakery/hafrashah.html';
 
     // ===== RAFFLE NUMBER =====
@@ -652,15 +652,12 @@
         submitted_at:  new Date().toLocaleString('he-IL', { timeZone: 'Asia/Jerusalem' })
       };
 
-      // Send to Google Sheets (if URL set)
+      // Send to Google Sheets via GET (works with no-cors)
       if (APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL_HERE') {
         try {
-          await fetch(APPS_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
+          const url = new URL(APPS_SCRIPT_URL);
+          Object.entries(payload).forEach(([k, v]) => url.searchParams.append(k, v));
+          await fetch(url.toString(), { method: 'GET', mode: 'no-cors' });
         } catch (err) {
           console.warn('Failed to send to Google Sheets:', err);
         }

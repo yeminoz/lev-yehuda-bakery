@@ -98,32 +98,45 @@
 
     .page-hero-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
 
+    .bsd {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: rgba(253,250,245,0.7);
+      letter-spacing: 0.05em;
+    }
+
     .page-hero-logo {
       margin-bottom: 20px;
     }
 
     .page-hero-logo img {
-      height: 90px;
+      height: 120px;
       width: auto;
     }
 
+    .page-hero-tagline {
+      font-family: var(--font-body);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: rgba(253,250,245,0.88);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
     .page-hero-sub {
-      font-family: var(--font-display);
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-family: 'Secular One', Georgia, serif;
+      font-size: clamp(2rem, 7vw, 3.2rem);
       color: var(--color-wheat-light);
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 16px;
-      margin-top: -12px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
     }
 
     .page-hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 6vw, 3rem);
-      font-weight: 900;
-      color: var(--color-white);
-      line-height: 1.2;
-      margin-bottom: 20px;
+      display: none;
     }
 
     .page-hero p {
@@ -453,11 +466,12 @@
 
   <!-- PAGE HERO -->
   <div class="page-hero">
+    <span class="bsd">בס"ד</span>
     <div class="page-hero-content">
       <div class="page-hero-logo">
         <img src="images/logo.png" alt="מאפיית לב יהודה" />
       </div>
-      <h1>מאפיית לב יהודה</h1>
+      <p class="page-hero-tagline">מאפית לב יהודה מחברת את עם ישראל לחברון עיר האבות באהבה 🤍</p>
       <p class="page-hero-sub">הפרשת חלה</p>
       <p>כל שבוע, בהכנת הבצקים, אנחנו מפרישים חלה בחברון עיר האבות.</p>
     </div>
@@ -494,7 +508,7 @@
               id="prayer-name"
               name="prayer_name"
               class="form-input"
-              placeholder="השם לתפילה"
+              placeholder="שם מלא + שם האב / האם"
               required
               autocomplete="off"
             />
@@ -519,10 +533,10 @@
             <div class="field-error" id="prayer-reason-error">אנא בחרו סיבה</div>
           </div>
 
-          <!-- פרטים נוספים -->
+          <!-- הערות -->
           <div class="form-group">
             <label class="form-label" for="extra-details">
-              פרטים נוספים
+              הערות
               <span class="optional">(אופציונלי)</span>
             </label>
             <textarea
@@ -538,14 +552,14 @@
           <div class="form-group">
             <label class="form-label" for="phone">
               מספר טלפון
-              <span class="optional">(לצורך עדכון)</span>
+              <span class="optional">(אופציונלי)</span>
             </label>
             <input
               type="tel"
               id="phone"
               name="phone"
               class="form-input"
-              placeholder="לצורך עדכון"
+              placeholder="050-0000000"
               autocomplete="tel"
             />
           </div>

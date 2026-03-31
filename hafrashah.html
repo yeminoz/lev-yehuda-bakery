@@ -98,10 +98,15 @@
 
     .page-hero-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
 
-    .page-hero-icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      display: block;
+    .page-hero-logo {
+      margin-bottom: 20px;
+    }
+
+    .page-hero-logo img {
+      height: 80px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
     }
 
     .page-hero h1 {
@@ -441,9 +446,11 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-content">
-      <span class="page-hero-icon">🕯️</span>
-      <h1>הפרשת חלה<br/>מאפיית לב יהודה</h1>
-      <p>כל שבוע, לפני האפייה, אנחנו מפרישים חלה ומתפללים בעיר האבות.<br/>שלחו לנו שם — ונעלה אותו בתפילה.</p>
+      <div class="page-hero-logo">
+        <img src="images/logo.png" alt="מאפיית לב יהודה" />
+      </div>
+      <h1>הפרשת חלה — מאפיית לב יהודה</h1>
+      <p>כל שבוע, בהכנת הבצקים, אנחנו מפרישים חלה בחברון עיר האבות.<br/>שלחו לנו שם — ונעלה אותו בתפילה.</p>
     </div>
   </div>
 
@@ -451,14 +458,13 @@
   <div class="raffle-banner">
     <div class="raffle-banner-inner">
       <div class="raffle-banner-title">
-        🎗️ הגרלה שבועית
+        הגרלה שבועית
       </div>
       <p class="raffle-banner-body">
         כל ממלא טופס משתתף בהגרלה השבועית.<br/>
         הזוכה מקבל תפילת הפרשת חלה אישית בחברון —<br/>
         בקרבה לפתח גן עדן.
       </p>
-      <p class="raffle-banner-note">* ההגרלה מתקיימת כל שישי — הזוכה יקבל עדכון אישי.</p>
     </div>
   </div>
 
@@ -489,10 +495,10 @@
             <div class="field-error" id="prayer-name-error">אנא הכניסו שם לתפילה</div>
           </div>
 
-          <!-- סיבת התפילה -->
+          <!-- סוג הבקשה -->
           <div class="form-group">
             <label class="form-label" for="prayer-reason">
-              <span class="required">*</span> סיבת התפילה
+              <span class="required">*</span> סוג הבקשה (תפילה)
             </label>
             <select id="prayer-reason" name="prayer_reason" class="form-select" required>
               <option value="" disabled selected>בחרו סיבה...</option>
@@ -540,7 +546,7 @@
 
           <!-- SUBMIT -->
           <button type="submit" class="btn-submit" id="submit-btn">
-            <span class="btn-text">כנס להגרלה 🕯️</span>
+            <span class="btn-text">שליחת השם</span>
             <div class="spinner"></div>
           </button>
 
@@ -549,11 +555,10 @@
 
       <!-- THANK YOU -->
       <div id="thankyou-wrap">
-        <div class="thankyou-icon">💛</div>
-        <div class="thankyou-title">השם התקבל</div>
+        <div class="thankyou-title">בקשתך התקבלה</div>
         <p class="thankyou-body">
-          נכנסתם להגרלה השבועית.<br/>
-          בנוסף — נעלה את השם בתפילת הפרשת החלה הקרובה.<br/><br/>
+          בכל שבוע נעשית בחירה אקראית של 10 שמות לתפילה.<br/><br/>
+          נודיע לזוכה אישית.<br/><br/>
           <strong>שבת שלום.</strong>
         </p>
         <div class="raffle-number" id="raffle-number-display"></div>

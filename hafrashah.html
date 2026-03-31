@@ -118,21 +118,22 @@
     }
 
     .page-hero-tagline {
-      font-family: var(--font-body);
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-      color: rgba(253,250,245,0.88);
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      color: rgba(253,250,245,0.92);
       margin-bottom: 20px;
       line-height: 1.7;
+      font-weight: 500;
     }
 
     .page-hero-sub {
-      font-family: 'Secular One', Georgia, serif;
-      font-size: clamp(2rem, 7vw, 3.2rem);
+      font-family: 'Frank Ruhl Libre', Georgia, serif;
+      font-size: clamp(2.6rem, 9vw, 4.2rem);
       color: var(--color-wheat-light);
-      font-weight: 400;
+      font-weight: 900;
       margin-bottom: 16px;
       letter-spacing: 0.02em;
-      line-height: 1.2;
+      line-height: 1.1;
     }
 
     .page-hero h1 {
@@ -279,7 +280,7 @@
 
     .form-textarea {
       resize: vertical;
-      min-height: 90px;
+      min-height: 60px;
     }
 
     /* ===== SUBMIT BUTTON ===== */
@@ -471,7 +472,7 @@
       <div class="page-hero-logo">
         <img src="images/logo.png" alt="מאפיית לב יהודה" />
       </div>
-      <p class="page-hero-tagline">מאפית לב יהודה מחברת את עם ישראל לחברון עיר האבות באהבה 🤍</p>
+      <p class="page-hero-tagline">מאפית לב יהודה מחברת את עם ישראל לחברון עיר האבות באהבה</p>
       <p class="page-hero-sub">הפרשת חלה</p>
       <p>כל שבוע, בהכנת הבצקים, אנחנו מפרישים חלה בחברון עיר האבות.</p>
     </div>
@@ -533,21 +534,6 @@
             <div class="field-error" id="prayer-reason-error">אנא בחרו סיבה</div>
           </div>
 
-          <!-- הערות -->
-          <div class="form-group">
-            <label class="form-label" for="extra-details">
-              הערות
-              <span class="optional">(אופציונלי)</span>
-            </label>
-            <textarea
-              id="extra-details"
-              name="extra_details"
-              class="form-textarea"
-              placeholder="אם תרצו להוסיף משהו..."
-              rows="3"
-            ></textarea>
-          </div>
-
           <!-- מספר טלפון -->
           <div class="form-group">
             <label class="form-label" for="phone">
@@ -562,6 +548,20 @@
               placeholder="050-0000000"
               autocomplete="tel"
             />
+          </div>
+
+          <!-- הערות -->
+          <div class="form-group">
+            <label class="form-label" for="extra-details">
+              הערות
+              <span class="optional">(אופציונלי)</span>
+            </label>
+            <textarea
+              id="extra-details"
+              name="extra_details"
+              class="form-textarea"
+              rows="2"
+            ></textarea>
           </div>
 
           <!-- SUBMIT -->

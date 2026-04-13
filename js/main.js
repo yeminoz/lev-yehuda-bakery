@@ -447,4 +447,30 @@ document.addEventListener('DOMContentLoaded', () => {
   style.textContent = `.nav-list a.active { color: var(--color-burgundy); font-weight: 600; }`;
   document.head.appendChild(style);
 
+  // ===== REVIEW SLIDER =====
+  const reviewSlider = document.getElementById('reviewSlider');
+  if (reviewSlider) {
+    const reviewDots = document.querySelectorAll('.review-dot');
+    let reviewCurrent = 0;
+    const total = reviewSlider.querySelectorAll('.review-slide').length;
+
+    const goToReview = (index) => {
+      reviewCurrent = (index + total) % total;
+      reviewSlider.style.transform = `translateX(${reviewCurrent * 100}%)`;
+      reviewDots.forEach((d, i) => d.classList.toggle('active', i === reviewCurrent));
+    };
+
+    document.getElementById('reviewNext')?.addEventListener('click', () => goToReview(reviewCurrent - 1));
+    document.getElementById('reviewPrev')?.addEventListener('click', () => goToReview(reviewCurrent + 1));
+    reviewDots.forEach(dot => dot.addEventListener('click', () => goToReview(+dot.dataset.index)));
+    setInterval(() => goToReview(reviewCurrent + 1), 4000);
+
+    let rTouchStart = 0;
+    reviewSlider.addEventListener('touchstart', e => { rTouchStart = e.touches[0].clientX; }, { passive: true });
+    reviewSlider.addEventListener('touchend', e => {
+      const diff = rTouchStart - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goToReview(diff > 0 ? reviewCurrent + 1 : reviewCurrent - 1);
+    });
+  }
+
 });

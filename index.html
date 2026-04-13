@@ -195,20 +195,6 @@
 
         <div class="region-accordion fade-in" id="regionAccordion">
 
-          <!-- קרית ארבע -->
-          <div class="accordion-item" data-region="קרית ארבע">
-            <button class="accordion-header" aria-expanded="false">
-              <span class="region-title">קרית ארבע</span>
-              <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="accordion-body" hidden>
-              <ul class="store-list">
-                <li class="store-item" data-search="סופר דקל קרית ארבע סולם אלדד"><span class="store-name">סופר דקל</span><span class="store-address">סולם אלדד 2, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=סולם אלדד 2 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
-                <li class="store-item" data-search="סופר ציפו קרית ארבע הרב צבי יהודה קוק"><span class="store-name">סופר ציפו</span><span class="store-address">הרב צבי יהודה קוק 123, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=הרב צבי יהודה קוק 123 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
-              </ul>
-            </div>
-          </div>
-
           <!-- ירושלים -->
           <div class="accordion-item" data-region="ירושלים">
             <button class="accordion-header" aria-expanded="false">
@@ -266,6 +252,20 @@
                 </ul>
               </div>
 
+            </div>
+          </div>
+
+          <!-- קרית ארבע -->
+          <div class="accordion-item" data-region="קרית ארבע">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="region-title">קרית ארבע</span>
+              <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body" hidden>
+              <ul class="store-list">
+                <li class="store-item" data-search="סופר דקל קרית ארבע סולם אלדד"><span class="store-name">סופר דקל</span><span class="store-address">סולם אלדד 2, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=סולם אלדד 2 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+                <li class="store-item" data-search="סופר ציפו קרית ארבע הרב צבי יהודה קוק"><span class="store-name">סופר ציפו</span><span class="store-address">הרב צבי יהודה קוק 123, קרית ארבע</span><a class="store-waze" href="https://waze.com/ul?q=הרב צבי יהודה קוק 123 קרית ארבע&navigate=yes" target="_blank" rel="noopener">🗺 Waze</a></li>
+              </ul>
             </div>
           </div>
 
@@ -395,34 +395,27 @@
     <section class="testimonials section-padding" id="testimonials">
       <div class="container">
         <div class="section-intro fade-in">
-          <span class="section-label">ספרו עלינו</span>
-          <h2 class="section-title">מה אומרים עלינו</h2>
+          <span class="section-label">הלקוחות שלנו</span>
+          <h2 class="section-title">לקוחות מספרים</h2>
         </div>
 
-        <div class="testimonials-grid">
-          <blockquote class="testimonial-card fade-in">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"הטריות מדהימה — כאילו יצאה מהתנור אליי הביתה"</p>
-            <footer class="testimonial-author">
-              <span class="author-name">לקוחה מירושלים</span>
-            </footer>
-          </blockquote>
-
-          <blockquote class="testimonial-card fade-in fade-in-delay">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"הבייגל הירושלמי שלהם הוא הכי קרוב לאמיתי שמצאנו"</p>
-            <footer class="testimonial-author">
-              <span class="author-name">בעל מעדנייה, תל אביב</span>
-            </footer>
-          </blockquote>
-
-          <blockquote class="testimonial-card fade-in fade-in-delay-2">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">"הלקוחות שלי שואלים בכל שבוע איפה החלה הזו"</p>
-            <footer class="testimonial-author">
-              <span class="author-name">מנהל סופרמרקט</span>
-            </footer>
-          </blockquote>
+        <div class="review-slider-wrap fade-in">
+          <div class="review-slider" id="reviewSlider">
+            <div class="review-slide"><img src="images/review1.jpg" alt="המלצת לקוח 1" loading="lazy" /></div>
+            <div class="review-slide"><img src="images/review2.jpg" alt="המלצת לקוח 2" loading="lazy" /></div>
+            <div class="review-slide"><img src="images/review3.jpg" alt="המלצת לקוח 3" loading="lazy" /></div>
+            <div class="review-slide"><img src="images/review4.jpg" alt="המלצת לקוח 4" loading="lazy" /></div>
+            <div class="review-slide"><img src="images/review5.jpg" alt="המלצת לקוח 5" loading="lazy" /></div>
+          </div>
+          <button class="review-btn review-prev" id="reviewPrev" aria-label="הקודם">&#8250;</button>
+          <button class="review-btn review-next" id="reviewNext" aria-label="הבא">&#8249;</button>
+          <div class="review-dots" id="reviewDots">
+            <button class="review-dot active" data-index="0"></button>
+            <button class="review-dot" data-index="1"></button>
+            <button class="review-dot" data-index="2"></button>
+            <button class="review-dot" data-index="3"></button>
+            <button class="review-dot" data-index="4"></button>
+          </div>
         </div>
       </div>
     </section>

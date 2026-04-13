@@ -287,7 +287,6 @@ input, textarea, select, button {
 
 .logo-link {
   flex-shrink: 0;
-  order: 1;
 }
 
 .site-logo {
@@ -427,8 +426,12 @@ input, textarea, select, button {
 }
 
 @media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+
   .hero-img {
-    object-position: center center;
+    object-position: center 30%;
   }
 }
 
@@ -1560,6 +1563,18 @@ input, textarea, select, button {
 
   .hamburger {
     display: flex;
+  }
+
+  /* לוגו ממורכז במובייל */
+  .header-inner {
+    position: relative;
+  }
+
+  .logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 }
 

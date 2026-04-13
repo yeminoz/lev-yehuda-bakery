@@ -98,40 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = 0;
 
     const slideTo = (index) => {
+      slides[current].classList.remove('active');
       current = (index + total) % total;
-      slider.style.transform = `translateX(${current * 100}%)`;
+      slides[current].classList.add('active');
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     };
+
+    // Init
+    slides[0].classList.add('active');
 
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         slideTo(Number(dot.dataset.index));
         clearInterval(autoTimer);
-        autoTimer = setInterval(() => slideTo(current + 1), 3000);
+        autoTimer = setInterval(() => slideTo(current + 1), 3500);
       });
     });
 
-    // Touch/swipe support
-    let touchStartX = 0;
-    slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    slider.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) {
-        diff > 0 ? slideTo(current + 1) : slideTo(current - 1);
-      }
-    });
-
-    // Keyboard
-    slider.setAttribute('tabindex', '0');
-    slider.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight') slideTo(current - 1);
-      if (e.key === 'ArrowLeft') slideTo(current + 1);
-    });
-
-    // Auto-advance every 3s
-    let autoTimer = setInterval(() => slideTo(current + 1), 3000);
-
-    slideTo(0);
+    // Auto-advance every 3.5s
+    let autoTimer = setInterval(() => slideTo(current + 1), 3500);
   }
 
   // ===== RIPPLE EFFECT on buttons =====
@@ -450,27 +435,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== REVIEW SLIDER =====
   const reviewSlider = document.getElementById('reviewSlider');
   if (reviewSlider) {
+    const reviewSlides = reviewSlider.querySelectorAll('.review-slide');
     const reviewDots = document.querySelectorAll('.review-dot');
     let reviewCurrent = 0;
-    const total = reviewSlider.querySelectorAll('.review-slide').length;
+    const total = reviewSlides.length;
 
     const goToReview = (index) => {
+      reviewSlides[reviewCurrent].classList.remove('active');
       reviewCurrent = (index + total) % total;
-      reviewSlider.style.transform = `translateX(${reviewCurrent * 100}%)`;
+      reviewSlides[reviewCurrent].classList.add('active');
       reviewDots.forEach((d, i) => d.classList.toggle('active', i === reviewCurrent));
     };
 
-    document.getElementById('reviewNext')?.addEventListener('click', () => goToReview(reviewCurrent - 1));
-    document.getElementById('reviewPrev')?.addEventListener('click', () => goToReview(reviewCurrent + 1));
+    // Init
+    reviewSlides[0].classList.add('active');
+
     reviewDots.forEach(dot => dot.addEventListener('click', () => goToReview(+dot.dataset.index)));
     setInterval(() => goToReview(reviewCurrent + 1), 4000);
-
-    let rTouchStart = 0;
-    reviewSlider.addEventListener('touchstart', e => { rTouchStart = e.touches[0].clientX; }, { passive: true });
-    reviewSlider.addEventListener('touchend', e => {
-      const diff = rTouchStart - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) goToReview(diff > 0 ? reviewCurrent + 1 : reviewCurrent - 1);
-    });
   }
 
 });

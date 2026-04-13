@@ -287,10 +287,7 @@ input, textarea, select, button {
 
 .logo-link {
   flex-shrink: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  order: 1;
 }
 
 .site-logo {
@@ -431,7 +428,7 @@ input, textarea, select, button {
 
 @media (max-width: 600px) {
   .hero-img {
-    object-position: 40% center;
+    object-position: center center;
   }
 }
 

@@ -20,7 +20,7 @@
   --color-border: rgba(196, 151, 90, 0.25);
 
   --font-display: 'Frank Ruhl Libre', Georgia, serif;
-  --font-body: 'Heebo', Arial, sans-serif;
+  --font-body: 'Heebo', 'Inter', Arial, sans-serif;
   --font-accent: 'David Libre', Georgia, serif;
   --font-story: 'Secular One', Georgia, serif;
 
@@ -56,6 +56,8 @@ body {
   background: var(--color-bg);
   color: var(--color-dark);
   line-height: 1.7;
+  letter-spacing: normal;
+  word-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -108,7 +110,7 @@ input, textarea, select, button {
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: var(--color-wheat);
   margin-bottom: 12px;
@@ -464,7 +466,7 @@ input, textarea, select, button {
 .hero-label {
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: normal;
   color: var(--color-wheat-light);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -488,7 +490,7 @@ input, textarea, select, button {
   font-weight: 300;
   color: var(--color-cream);
   margin-bottom: 28px;
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
 }
 
 .hero-badges {
@@ -508,7 +510,7 @@ input, textarea, select, button {
   font-weight: 500;
   color: var(--color-cream);
   background: rgba(196, 151, 90, 0.12);
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
 }
 
 .hero-ctas {
@@ -936,7 +938,7 @@ input, textarea, select, button {
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: normal;
   text-transform: uppercase;
   color: var(--color-wheat);
   padding: 14px 0 6px;
@@ -999,7 +1001,7 @@ input, textarea, select, button {
   padding: 3px 12px;
   border: 1px solid var(--color-border);
   border-radius: 20px;
-  letter-spacing: 0.06em;
+  letter-spacing: normal;
   text-transform: uppercase;
 }
 
@@ -1196,7 +1198,7 @@ input, textarea, select, button {
 .stars {
   color: var(--color-wheat);
   font-size: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: normal;
   margin-bottom: 14px;
 }
 
@@ -1481,13 +1483,13 @@ input, textarea, select, button {
   color: var(--color-wheat-light);
   line-height: 1.4;
   margin-bottom: 8px;
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
 }
 
 .blessing-sub {
   font-size: 0.78rem;
   color: rgba(253, 250, 245, 0.45);
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
 }
 
 .footer-bottom {

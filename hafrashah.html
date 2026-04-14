@@ -50,6 +50,8 @@
       background: var(--color-bg);
       color: var(--color-dark);
       line-height: 1.7;
+      word-spacing: 0.05em;
+      letter-spacing: normal;
       -webkit-font-smoothing: antialiased;
       min-height: 100vh;
     }
@@ -105,7 +107,7 @@
       font-family: var(--font-display);
       font-size: 0.85rem;
       color: rgba(253,250,245,0.7);
-      letter-spacing: 0.05em;
+      letter-spacing: normal;
     }
 
     .page-hero-logo {
@@ -118,22 +120,23 @@
     }
 
     .page-hero-tagline {
-      font-family: var(--font-display);
-      font-size: clamp(1.3rem, 4vw, 1.8rem);
-      color: rgba(253,250,245,0.92);
-      margin-bottom: 20px;
-      line-height: 1.7;
-      font-weight: 500;
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: rgba(253,250,245,0.85);
+      margin-bottom: 24px;
+      line-height: 1.8;
+      font-weight: 400;
     }
 
     .page-hero-sub {
       font-family: 'Frank Ruhl Libre', Georgia, serif;
-      font-size: clamp(3.2rem, 12vw, 5.5rem);
+      font-size: clamp(4rem, 15vw, 6.5rem);
       color: var(--color-wheat-light);
       font-weight: 900;
-      margin-bottom: 16px;
-      letter-spacing: 0.02em;
-      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: normal;
+      line-height: 1.05;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.25);
     }
 
     .page-hero h1 {
@@ -434,6 +437,66 @@
       border-color: var(--color-burgundy);
     }
 
+    /* ===== STORES BANNER ===== */
+    .stores-banner {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .stores-banner-inner {
+      background: var(--color-dark);
+      border-radius: var(--border-radius-lg);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .stores-banner-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .stores-banner-text p {
+      font-size: 0.88rem;
+      color: rgba(253,250,245,0.7);
+      line-height: 1.6;
+    }
+
+    .btn-stores {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: var(--color-wheat);
+      color: var(--color-dark);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: var(--border-radius);
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .btn-stores:hover {
+      background: var(--color-wheat-light);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 480px) {
+      .stores-banner-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+      }
+      .btn-stores { width: 100%; justify-content: center; }
+    }
+
     /* ===== FOOTER ===== */
     .page-footer {
       text-align: center;
@@ -550,6 +613,22 @@
             />
           </div>
 
+          <!-- עיר מגורים -->
+          <div class="form-group">
+            <label class="form-label" for="city">
+              עיר מגורים
+              <span class="optional">(אופציונלי)</span>
+            </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              class="form-input"
+              placeholder="עיר מגורים"
+              autocomplete="address-level2"
+            />
+          </div>
+
           <!-- הערות -->
           <div class="form-group">
             <label class="form-label" for="extra-details">
@@ -593,6 +672,20 @@
 
     </div>
   </section>
+
+  <!-- STORES BANNER -->
+  <div class="stores-banner">
+    <div class="stores-banner-inner">
+      <div class="stores-banner-text">
+        <h3>נקודות מכירה</h3>
+        <p>מחפשים איפה לקנות חלות לב יהודה?<br/>מצאו נקודת מכירה קרובה אליכם</p>
+      </div>
+      <a href="index.html#where-to-buy" class="btn-stores">
+        לנקודות המכירה
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </a>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="page-footer">

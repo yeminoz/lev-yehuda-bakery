@@ -114,27 +114,10 @@ input, textarea, select, button {
   text-transform: uppercase;
   color: var(--color-wheat);
   margin-bottom: 12px;
-  position: relative;
-  padding-right: 28px;
-}
-
-.section-label::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 2px;
-  background: var(--color-wheat);
 }
 
 .section-label.light {
   color: var(--color-wheat-light);
-}
-
-.section-label.light::before {
-  background: var(--color-wheat-light);
 }
 
 .section-intro {

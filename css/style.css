@@ -2030,7 +2030,7 @@ input, textarea, select, button {
 .whatsapp-float {
   position: fixed;
   bottom: 28px;
-  left: 28px;
+  right: 28px;
   width: 58px;
   height: 58px;
   background: #25D366;

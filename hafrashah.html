@@ -246,6 +246,12 @@
       margin-right: 6px;
     }
 
+    .form-label .required-star {
+      color: #c0392b;
+      margin-right: 4px;
+      font-weight: 700;
+    }
+
     .form-input,
     .form-select,
     .form-textarea {
@@ -605,7 +611,7 @@
           <div class="form-group">
             <label class="form-label" for="phone">
               מספר טלפון
-              <span class="optional">(אופציונלי)</span>
+              <span class="required-star">*</span>
             </label>
             <input
               type="tel"
@@ -614,7 +620,9 @@
               class="form-input"
               placeholder="050-0000000"
               autocomplete="tel"
+              required
             />
+            <div class="field-error" id="phone-error">אנא הכניסו מספר טלפון</div>
           </div>
 
           <!-- עיר מגורים -->
@@ -754,6 +762,17 @@
       } else {
         reasonInput.classList.remove('invalid');
         document.getElementById('prayer-reason-error').style.display = 'none';
+      }
+
+      // Validate phone
+      const phoneInput = document.getElementById('phone');
+      if (!phoneInput.value.trim()) {
+        phoneInput.classList.add('invalid');
+        document.getElementById('phone-error').style.display = 'block';
+        valid = false;
+      } else {
+        phoneInput.classList.remove('invalid');
+        document.getElementById('phone-error').style.display = 'none';
       }
 
       if (!valid) return;

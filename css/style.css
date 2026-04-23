@@ -35,7 +35,7 @@
 
   --max-width: 1200px;
   --section-padding: 90px 0;
-  --header-height: 72px;
+  --header-height: 110px;
 }
 
 /* ===== RESET & BASE ===== */
@@ -275,7 +275,7 @@ input, textarea, select, button {
 }
 
 .site-logo {
-  height: 48px;
+  height: 82px;
   width: auto;
   object-fit: contain;
 }
@@ -2055,6 +2055,7 @@ input, textarea, select, button {
   /* --- Section spacing --- */
   :root {
     --section-padding: 48px 0;
+    --header-height: 80px;
   }
 
   .container {

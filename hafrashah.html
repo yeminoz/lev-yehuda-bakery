@@ -788,7 +788,7 @@
         prayer_name:   nameInput.value.trim(),
         prayer_reason: reasonInput.value,
         extra_details: document.getElementById('extra-details').value.trim(),
-        phone:         document.getElementById('phone').value.trim(),
+        phone:         document.getElementById('phone').value.trim().replace(/^\+972\s?/, '0'),
         raffle_number: raffleNumber,
         submitted_at:  new Date().toLocaleString('he-IL', { timeZone: 'Asia/Jerusalem' })
       };

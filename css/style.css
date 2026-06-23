@@ -410,16 +410,6 @@ input, textarea, select, button {
   object-position: center center;
 }
 
-@media (max-width: 600px) {
-  .hero {
-    min-height: 70vh;
-  }
-
-  .hero-img {
-    object-position: center 30%;
-  }
-}
-
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -2078,7 +2068,7 @@ input, textarea, select, button {
 
   /* --- Hero --- */
   .hero {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 
   .hero-img {
@@ -2134,5 +2124,26 @@ input, textarea, select, button {
   .review-slider-wrap {
     max-width: 100%;
     padding-bottom: 56px;
+  }
+}
+
+/* ===== Small phones — re-applied last so it wins over the 768px block above ===== */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 56vh;
+  }
+
+  .hero-img {
+    object-position: center 22%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(30, 28, 26, 0.88) 0%,
+      rgba(30, 28, 26, 0.5) 40%,
+      rgba(30, 28, 26, 0.2) 70%,
+      rgba(30, 28, 26, 0.05) 100%
+    );
   }
 }

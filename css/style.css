@@ -655,7 +655,8 @@ input, textarea, select, button {
 
 .product-slide-img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 65vh;
+  max-height: 560px;
   overflow: hidden;
   background: var(--color-cream-light);
 }
@@ -1585,8 +1586,9 @@ input, textarea, select, button {
   }
 
   .product-slide-img {
-    aspect-ratio: 3 / 4;
-    height: auto;
+    aspect-ratio: unset;
+    height: 50vh;
+    max-height: 420px;
     min-height: unset;
   }
 
@@ -2106,9 +2108,10 @@ input, textarea, select, button {
   }
 
   .product-slide-img {
-    height: auto;
+    aspect-ratio: unset;
+    height: 50vh;
+    max-height: 420px;
     min-height: unset;
-    aspect-ratio: 3 / 4;
   }
 
   .product-slide-img img {
